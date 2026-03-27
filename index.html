@@ -265,7 +265,39 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.07);padding
 .btn-next{background:var(--gold);color:var(--navy);border:none;padding:12px 28px;font-family:'Raleway',sans-serif;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .3s;border-radius:2px;}
 .btn-next:hover{background:var(--gold-light);}
 
-/* LEGAL PAGES */
+/* SCHEDULING SECTION */
+.schedule-section{padding:90px 5%;background:var(--navy);}
+.schedule-inner{max-width:1100px;margin:0 auto;}
+.schedule-header{text-align:center;margin-bottom:52px;}
+.schedule-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:56px;align-items:start;}
+.schedule-info h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:#fff;margin-bottom:14px;}
+.schedule-info p{color:rgba(255,255,255,.6);font-size:14px;line-height:1.9;margin-bottom:22px;}
+.schedule-option{display:flex;align-items:flex-start;gap:14px;margin-bottom:18px;padding:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:3px;}
+.schedule-option-icon{font-size:22px;flex-shrink:0;margin-top:2px;}
+.schedule-option h4{color:#fff;font-size:14px;font-weight:700;margin-bottom:4px;}
+.schedule-option p{color:rgba(255,255,255,.52);font-size:13px;line-height:1.6;margin:0;}
+.schedule-option a{color:var(--gold-light);font-weight:700;}
+.schedule-form-box{background:#fff;padding:38px 34px;}
+.schedule-form-box h3{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.schedule-form-box p{color:var(--text-mid);font-size:13px;margin-bottom:22px;}
+.sched-form .form-group{margin-bottom:13px;}
+.sched-form label{display:block;font-size:11.5px;font-weight:700;color:var(--navy);letter-spacing:.5px;text-transform:uppercase;margin-bottom:5px;}
+.sched-form input,.sched-form select,.sched-form textarea{width:100%;background:var(--off-white);border:1px solid rgba(13,27,62,.12);color:#1a1a2e;padding:11px 14px;font-family:'Raleway',sans-serif;font-size:13.5px;outline:none;transition:border .3s;border-radius:2px;}
+.sched-form input:focus,.sched-form select:focus,.sched-form textarea:focus{border-color:var(--gold);}
+.sched-form select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234a5568' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;}
+.sched-form .form-row2{display:grid;grid-template-columns:1fr 1fr;gap:13px;}
+.sched-form .time-slots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:6px;}
+.time-slot{border:1.5px solid rgba(13,27,62,.12);padding:9px 6px;text-align:center;cursor:pointer;font-size:12px;font-weight:600;color:var(--navy);border-radius:2px;transition:all .2s;user-select:none;}
+.time-slot:hover{border-color:var(--gold);background:rgba(184,150,12,.05);}
+.time-slot.selected{border-color:var(--gold);background:rgba(184,150,12,.1);color:var(--navy);}
+.btn-schedule{width:100%;background:var(--gold);color:var(--navy);border:none;padding:14px;font-family:'Raleway',sans-serif;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .3s;border-radius:2px;margin-top:6px;}
+.btn-schedule:hover{background:var(--gold-light);}
+.schedule-success{display:none;text-align:center;padding:20px 0;}
+.schedule-success-icon{font-size:46px;margin-bottom:12px;}
+.schedule-success h4{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.schedule-success p{color:var(--text-mid);font-size:14px;line-height:1.7;}
+@media(max-width:900px){.schedule-grid{grid-template-columns:1fr;}.sched-form .form-row2{grid-template-columns:1fr;}.sched-form .time-slots{grid-template-columns:repeat(2,1fr);}}
+
 .page-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;z-index:9998;display:none;overflow-y:auto;}
 .page-overlay.open{display:block;}
 .page-header{background:var(--navy);padding:50px 5% 40px;margin-top:78px;}
@@ -310,6 +342,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.07);padding
     <a href="#services">Services</a>
     <a href="#plans">Coverage Plans</a>
     <a href="#contact">Contact</a>
+    <a href="#schedule">Schedule</a>
     <a href="#" onclick="openLegal('terms');return false;">Terms</a>
     <a href="#" onclick="openQuote();return false;" class="nav-btn">Get a Quote</a>
   </div>
@@ -514,7 +547,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.07);padding
       <h2>Have Questions About Coverage?</h2>
       <p>Stay informed and get personalized guidance from our licensed agents. Sign up to receive updates on new insurance packages, exclusive offers, and expert advice tailored to your needs.</p>
       <div class="contact-detail"><span>📍</span><span>Licensed in Maryland &amp; surrounding states</span></div>
-      <div class="contact-detail"><span>📞</span><span>Speak with a licensed agent</span></div>
+      <div class="contact-detail"><span>📞</span><span>(301) 383-1000</span></div>
       <div class="contact-detail"><span>✉️</span><span>Contact us anytime via the form</span></div>
       <div class="contact-detail"><span>🔒</span><span>Your information is always secure and never sold</span></div>
     </div>
@@ -558,6 +591,111 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.07);padding
   </div>
 </section>
 
+<!-- SCHEDULING SECTION -->
+<section id="schedule" class="schedule-section">
+  <div class="schedule-inner">
+    <div class="schedule-header">
+      <div class="sec-label" style="color:var(--gold-light);display:block;text-align:center;margin-bottom:10px;">Schedule an Appointment</div>
+      <h2 class="sec-title-w" style="text-align:center;">Book Time With a Licensed Agent</h2>
+      <p class="sec-text-w" style="text-align:center;max-width:520px;margin:0 auto;">Whether you have questions about coverage or are ready to get a quote, our agents are here to help — on your schedule.</p>
+    </div>
+    <div class="schedule-grid">
+      <div class="schedule-info">
+        <h3>Ways to Connect With Us</h3>
+        <p>Pick the option that works best for you. Our licensed agents are available to walk you through your options and answer every question.</p>
+        <div class="schedule-option">
+          <div class="schedule-option-icon">📞</div>
+          <div>
+            <h4>Call Us Directly</h4>
+            <p>Speak with an agent right now.<br><a href="tel:3013831000">(301) 383-1000</a></p>
+          </div>
+        </div>
+        <div class="schedule-option">
+          <div class="schedule-option-icon">📅</div>
+          <div>
+            <h4>Schedule a Consultation</h4>
+            <p>Use the form to book a specific date and time. A licensed agent will call or meet with you at your appointment.</p>
+          </div>
+        </div>
+        <div class="schedule-option">
+          <div class="schedule-option-icon">💬</div>
+          <div>
+            <h4>Request a Callback</h4>
+            <p>Leave your name and number and we'll call you back within one business day — at your convenience.</p>
+          </div>
+        </div>
+        <div class="schedule-option">
+          <div class="schedule-option-icon">🔒</div>
+          <div>
+            <h4>Fully Confidential</h4>
+            <p>Everything you share is private and secure. Your information is never sold or shared outside of insurance processing.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="schedule-form-box">
+        <div id="schedFormWrap">
+          <h3>Request an Appointment</h3>
+          <p>Fill out the form below and a licensed agent will confirm your appointment within one business day.</p>
+          <div class="sched-form">
+            <div class="form-row2">
+              <div class="form-group"><label>First Name</label><input type="text" id="sc-fname" placeholder="First name"></div>
+              <div class="form-group"><label>Last Name</label><input type="text" id="sc-lname" placeholder="Last name"></div>
+            </div>
+            <div class="form-row2">
+              <div class="form-group"><label>Phone Number</label><input type="tel" id="sc-phone" placeholder="(301) 000-0000"></div>
+              <div class="form-group"><label>Email Address</label><input type="email" id="sc-email" placeholder="your@email.com"></div>
+            </div>
+            <div class="form-row2">
+              <div class="form-group"><label>Preferred Date</label><input type="date" id="sc-date"></div>
+              <div class="form-group"><label>Appointment Type</label>
+                <select id="sc-type">
+                  <option value="">Select...</option>
+                  <option>Phone Call</option>
+                  <option>In-Person Meeting</option>
+                  <option>Video Call</option>
+                  <option>Callback Request</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Preferred Time</label>
+              <div class="time-slots">
+                <div class="time-slot" onclick="selectTime(this)">9:00 AM</div>
+                <div class="time-slot" onclick="selectTime(this)">10:00 AM</div>
+                <div class="time-slot" onclick="selectTime(this)">11:00 AM</div>
+                <div class="time-slot" onclick="selectTime(this)">1:00 PM</div>
+                <div class="time-slot" onclick="selectTime(this)">2:00 PM</div>
+                <div class="time-slot" onclick="selectTime(this)">3:00 PM</div>
+              </div>
+            </div>
+            <div class="form-group"><label>Insurance Interest</label>
+              <select id="sc-interest">
+                <option value="">What can we help you with?</option>
+                <option>Auto Insurance</option>
+                <option>Home / Renters Insurance</option>
+                <option>Life Insurance</option>
+                <option>Business / Commercial Coverage</option>
+                <option>Medical Malpractice</option>
+                <option>Umbrella / Specialty</option>
+                <option>General Question</option>
+              </select>
+            </div>
+            <div class="form-group"><label>Additional Notes (Optional)</label><textarea id="sc-notes" rows="2" placeholder="Anything you'd like us to know before your appointment..."></textarea></div>
+            <button class="btn-schedule" onclick="submitSchedule()">📅 Request Appointment</button>
+            <p style="font-size:11.5px;color:var(--text-mid);text-align:center;margin-top:10px;">🔒 Your information is private and secure.</p>
+          </div>
+        </div>
+        <div class="schedule-success" id="schedSuccess">
+          <div class="schedule-success-icon">📅</div>
+          <h4>Appointment Requested!</h4>
+          <p>Thank you! A licensed Integrity One agent will review your request and confirm your appointment within one business day.<br><br>Questions in the meantime? Call us at <strong><a href="tel:3013831000" style="color:var(--gold);">(301) 383-1000</a></strong>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
@@ -568,6 +706,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.07);padding
           <span>Integrity One<br>Insurance</span>
         </div>
         <p class="footer-desc">Integrity One Insurance is committed to protecting individuals, families, and businesses with comprehensive, honest, and personalized coverage solutions. Licensed in Maryland and surrounding states.</p>
+        <p class="footer-desc" style="margin-top:12px;">📞 <strong style="color:rgba(255,255,255,.7);">(301) 383-1000</strong></p>
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
@@ -575,6 +714,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.07);padding
           <li><a href="#about">About Us</a></li>
           <li><a href="#services">Our Services</a></li>
           <li><a href="#plans">Coverage Plans</a></li>
+          <li><a href="#schedule">Schedule Appointment</a></li>
           <li><a href="#contact">Contact Us</a></li>
           <li><a href="#" onclick="openQuote();return false;">Get a Quote</a></li>
         </ul>
@@ -942,7 +1082,19 @@ function submitQuote(){
   btn.style.color='#fff';
 }
 
-// Close modal on overlay click
+// ======== SCHEDULING ========
+function selectTime(el){
+  document.querySelectorAll('.time-slot').forEach(t=>t.classList.remove('selected'));
+  el.classList.add('selected');
+}
+function submitSchedule(){
+  var fname=document.getElementById('sc-fname').value.trim();
+  var phone=document.getElementById('sc-phone').value.trim();
+  if(!fname||!phone){alert('Please enter your name and phone number.');return;}
+  document.getElementById('schedFormWrap').style.display='none';
+  document.getElementById('schedSuccess').style.display='block';
+}
+
 document.getElementById('quoteModal').addEventListener('click',function(e){if(e.target===this)closeQuote();});
 </script>
 </body>
